@@ -24,8 +24,8 @@
     </div>
   </aside>
 
-  <!-- Navbar -->
-  <header class="navbar">
+  <!-- Navbar (Dark Glass Breborn Style) -->
+  <header class="navbar navbar-dark">
     <div class="container nav-inner">
       <a href="#" class="brand">
         <span class="brand-monogram">QM</span>
@@ -43,7 +43,7 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="#cotizador" class="btn btn-dark">Consultar Fecha ➔</a>
+        <a href="#cotizador" class="btn btn-bronze">Consultar Fecha ➔</a>
         <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Menú">
           <span></span><span></span><span></span>
         </button>
@@ -58,61 +58,61 @@
     <a href="#cotizador" class="m-link">💬 Simular Cotización WhatsApp</a>
   </div>
 
-  <!-- Editorial Split Hero -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <span class="eyebrow">LIMACHE &amp; V REGIÓN • AGENDA ABIERTA 2026 / 2027</span>
-        <h1 class="hero-title">
-          Arquitectura para celebrar,<br>
-          <em>sin perder ni una cotización.</em>
-        </h1>
-        <p class="hero-sub">
-          Pabellón de cristal para matrimonios, jardines con olivos centenarios y quincho con piscina privada para paseos de empresa y celebraciones familiares.
-          Calcula tu presupuesto aproximado en 30 segundos y coordina visita por WhatsApp.
-        </p>
+  <!-- Full-Bleed Cinematic Hero (Breborn Style: Background video across the entire lead) -->
+  <section class="hero hero-fullbleed">
+    <div class="hero-bg-media">
+      <video id="heroBgVideo" class="hero-bg-video" autoplay loop muted playsinline preload="auto" poster="assets/hero_eventos_poster.jpg">
+        <source src="assets/hero_eventos_bg.mp4" type="video/mp4">
+        <img src="assets/hero_eventos_poster.jpg" alt="Centro de Eventos Quinta Mirador">
+      </video>
+      <div class="hero-bg-overlay"></div>
+    </div>
 
-        <div class="hero-cta-row">
-          <a href="#cotizador" class="btn btn-bronze">Simular Mi Evento ➔</a>
-          <a href="#espacios" class="btn btn-outline">Ver Capacidades</a>
-        </div>
-
-        <div class="hero-metrics">
-          <div>
-            <strong>40 a 300</strong>
-            <span>Invitados en distintos formatos</span>
-          </div>
-          <div>
-            <strong>90 autos</strong>
-            <span>Estacionamiento privado iluminado</span>
-          </div>
-          <div>
-            <strong>100% Exclusivo</strong>
-            <span>Solo 1 evento por fecha</span>
-          </div>
-        </div>
+    <div class="container hero-fullbleed-content">
+      <div class="hero-live-badge-row">
+        <span class="video-live-tag">
+          <span class="pulse-indicator"></span> Atmósfera en Movimiento • Gala &amp; Jardín de Luces
+        </span>
+        <button id="videoSoundBtn" class="video-sound-toggle" type="button" aria-label="Activar audio de fondo">
+          <span id="soundIcon">🔇</span> <span id="soundText">Activar Audio</span>
+        </button>
       </div>
 
-      <div class="hero-visual">
-        <div class="hero-video-frame">
-          <video id="heroVideo" class="hero-video" autoplay loop muted playsinline preload="auto" poster="assets/hero_eventos.jpg">
-            <source src="assets/hero_eventos.mp4" type="video/mp4">
-            <img src="assets/hero_eventos.jpg" alt="Pabellón de cristal y mesa imperial iluminada al atardecer para matrimonios y eventos" class="hero-photo">
-          </video>
+      <span class="eyebrow eyebrow-light">LIMACHE &amp; V REGIÓN • AGENDA ABIERTA 2026 / 2027</span>
 
-          <div class="hero-video-overlay">
-            <span class="video-live-tag">
-              <span class="pulse-indicator"></span> Atmósfera en Movimiento
-            </span>
-            <button id="videoSoundBtn" class="video-sound-toggle" type="button" aria-label="Activar audio de fondo">
-              <span id="soundIcon">🔇</span> <span id="soundText">Activar Audio</span>
-            </button>
-          </div>
+      <h1 class="hero-title hero-title-light">
+        Arquitectura para celebrar,<br>
+        <em>sin perder ni una cotización.</em>
+      </h1>
 
-          <div class="hero-float-card">
-            <span>✨ VISITAS GUIADAS PRESENCIALES</span>
-            <strong>Coordina recorrido por WhatsApp y conoce disponibilidad real.</strong>
-          </div>
+      <p class="hero-sub hero-sub-light">
+        Carpa de gala con cielo estrellado, pabellón de cristal y praderas con olivos iluminados para matrimonios y celebraciones privadas. Calcula tu presupuesto en 30 segundos y coordina tu visita presencial por WhatsApp.
+      </p>
+
+      <div class="hero-cta-row hero-cta-center">
+        <a href="#cotizador" class="btn btn-bronze btn-glow">Simular Mi Evento ➔</a>
+        <a href="#espacios" class="btn btn-glass">Ver Espacios &amp; Capacidades</a>
+        <a href="https://wa.me/56956823670?text=%C2%A1Hola!%20Quiero%20coordinar%20una%20visita%20a%20Quinta%20Mirador." target="_blank" rel="noopener" class="btn btn-wa">
+          <span>💬</span> Coordinar Visita
+        </a>
+      </div>
+
+      <div class="hero-metrics-glass">
+        <div class="metric-glass-card">
+          <strong>40 a 300</strong>
+          <span>Invitados en salones y exteriores</span>
+        </div>
+        <div class="metric-glass-card">
+          <strong>90 autos</strong>
+          <span>Estacionamiento privado con guardias</span>
+        </div>
+        <div class="metric-glass-card">
+          <strong>100% Exclusivo</strong>
+          <span>Un solo evento por fecha</span>
+        </div>
+        <div class="metric-glass-card">
+          <strong>Directo a WhatsApp</strong>
+          <span>Sin comisiones de intermediarios</span>
         </div>
       </div>
     </div>

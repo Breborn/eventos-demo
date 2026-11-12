@@ -321,7 +321,7 @@ function init() {
   document.querySelectorAll('.m-link').forEach((a) => a.addEventListener('click', () => mMenu.classList.remove('open')));
 
   // Video Controls & Autoplay Assurance
-  const heroVideo = document.getElementById('heroVideo');
+  const heroVideo = document.getElementById('heroBgVideo') || document.getElementById('heroVideo');
   const soundBtn = document.getElementById('videoSoundBtn');
   const soundIcon = document.getElementById('soundIcon');
   const soundText = document.getElementById('soundText');
