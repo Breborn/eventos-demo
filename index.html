@@ -94,10 +94,25 @@
       </div>
 
       <div class="hero-visual">
-        <img src="assets/hero_eventos.jpg" alt="Pabellón de cristal y mesa imperial iluminada al atardecer para matrimonios y eventos" class="hero-photo">
-        <div class="hero-float-card">
-          <span>✨ VISITAS GUIADAS PRESENCIALES</span>
-          <strong>Coordina recorrido por WhatsApp y conoce disponibilidad real.</strong>
+        <div class="hero-video-frame">
+          <video id="heroVideo" class="hero-video" autoplay loop muted playsinline preload="auto" poster="assets/hero_eventos.jpg">
+            <source src="assets/hero_eventos.mp4" type="video/mp4">
+            <img src="assets/hero_eventos.jpg" alt="Pabellón de cristal y mesa imperial iluminada al atardecer para matrimonios y eventos" class="hero-photo">
+          </video>
+
+          <div class="hero-video-overlay">
+            <span class="video-live-tag">
+              <span class="pulse-indicator"></span> Atmósfera en Movimiento
+            </span>
+            <button id="videoSoundBtn" class="video-sound-toggle" type="button" aria-label="Activar audio de fondo">
+              <span id="soundIcon">🔇</span> <span id="soundText">Activar Audio</span>
+            </button>
+          </div>
+
+          <div class="hero-float-card">
+            <span>✨ VISITAS GUIADAS PRESENCIALES</span>
+            <strong>Coordina recorrido por WhatsApp y conoce disponibilidad real.</strong>
+          </div>
         </div>
       </div>
     </div>

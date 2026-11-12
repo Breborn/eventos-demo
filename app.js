@@ -320,6 +320,50 @@ function init() {
   mToggle.addEventListener('click', () => mMenu.classList.toggle('open'));
   document.querySelectorAll('.m-link').forEach((a) => a.addEventListener('click', () => mMenu.classList.remove('open')));
 
+  // Video Controls & Autoplay Assurance
+  const heroVideo = document.getElementById('heroVideo');
+  const soundBtn = document.getElementById('videoSoundBtn');
+  const soundIcon = document.getElementById('soundIcon');
+  const soundText = document.getElementById('soundText');
+
+  if (heroVideo && soundBtn) {
+    heroVideo.muted = true;
+    heroVideo.play().catch(() => {
+      const resume = () => {
+        heroVideo.play();
+        document.removeEventListener('click', resume);
+        document.removeEventListener('touchstart', resume);
+      };
+      document.addEventListener('click', resume, { once: true });
+      document.addEventListener('touchstart', resume, { once: true });
+    });
+
+    soundBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (heroVideo.muted) {
+        heroVideo.muted = false;
+        heroVideo.volume = 0.75;
+        heroVideo.play();
+        soundIcon.textContent = '🔊';
+        soundText.textContent = 'Silenciar';
+        soundBtn.classList.add('unmuted');
+      } else {
+        heroVideo.muted = true;
+        soundIcon.textContent = '🔇';
+        soundText.textContent = 'Activar Audio';
+        soundBtn.classList.remove('unmuted');
+      }
+    });
+
+    heroVideo.addEventListener('click', () => {
+      if (heroVideo.paused) {
+        heroVideo.play();
+      } else {
+        heroVideo.pause();
+      }
+    });
+  }
+
   renderSpaces();
   renderPackages();
   renderGallery();
